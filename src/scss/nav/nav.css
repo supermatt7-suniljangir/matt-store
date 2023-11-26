@@ -1,0 +1,108 @@
+.navbar {
+  z-index: 2;
+  position: fixed;
+  background-color: #1e1e1e;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+}
+.navbar .navigation-bar {
+  height: inherit;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+.navbar .navigation-bar li {
+  cursor: pointer;
+}
+.navbar .navigation-bar .navigation-bar-l {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+.navbar .navigation-bar .navigation-bar-l .search-bar {
+  width: 25rem;
+  height: 2.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .navigation-bar .navigation-bar-l .search-bar input {
+  border-radius: 5px 0 0 5px;
+  height: 100%;
+  padding: 0.5rem;
+  height: 85%;
+  width: 95%;
+  background-color: #383838;
+  border: none;
+  color: #fff;
+}
+.navbar .navigation-bar .navigation-bar-l .search-bar input:focus {
+  border: none;
+  outline: none;
+}
+.navbar .navigation-bar .navigation-bar-l .svg-search-icon-container {
+  border-radius: 0 5px 5px 0;
+  width: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  height: 85%;
+}
+.navbar .navigation-bar .navigation-bar-l #categories-input {
+  padding: 0.2rem 0.2rem;
+  font-size: 1rem;
+  text-align: center;
+  background: #383838;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+.navbar .navigation-bar .navigation-bar-l .categories-wrapper-container {
+  overflow: visible;
+  width: 10rem;
+  height: 2.3rem;
+  background: #383838;
+  position: relative;
+  border-radius: 5px;
+}
+.navbar .navigation-bar .navigation-bar-l .categories-wrapper-container .category-title {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.navbar .navigation-bar .navigation-bar-l .categories-wrapper-container .dropdown-contents {
+  border-radius: 0 0 10px 10px;
+  position: absolute;
+  background: #383838;
+  width: 100%;
+  top: 95%;
+  left: 0;
+  padding: 0.5rem 0.2rem;
+  height: -moz-max-content;
+  height: max-content;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-transform: capitalize;
+  gap: 0.3rem;
+  display: none;
+}
+.navbar .navigation-bar .navigation-bar-l .categories-wrapper-container:where(:hover, :focus) .dropdown-contents {
+  display: flex;
+}
+.navbar .navigation-bar .navigation-bar-r img {
+  margin-top: -1rem;
+  width: 5.5rem;
+}/*# sourceMappingURL=nav.css.map */

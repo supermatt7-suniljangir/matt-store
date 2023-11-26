@@ -1,0 +1,47 @@
+@import "../variables-mixins/var-mix";
+
+footer {
+  height: 100vh;
+  gap: 2rem;
+  position: relative;
+  @include dfcc;
+  .logo-box {
+    margin: auto;
+  }
+  .matt-store-info {
+    @include dfcc;
+    gap: 1rem;
+    .bullshit {
+      p {
+        cursor: pointer;
+      }
+      @include dfc;
+      gap: 1rem;
+    }
+  }
+  .go-to-top {
+    cursor: pointer;
+  }
+  .footer-contents-bottom-left {
+    position: absolute;
+    left: 1rem;
+    bottom: 1rem;
+    .visit-portfolio-btn {
+      font-family: "Archivo Narrow", sans-serif;
+      font-size: 110%;
+
+      border: none;
+      background: $bg-light;
+      padding: 0.5rem 1rem;
+      margin: 0 0 1rem 0;
+      a {
+        color: $bg-secondary;
+      }
+    }
+  }
+  .footer-contents-bottom-right {
+    position: absolute;
+    right: 1rem;
+    bottom: 1rem;
+  }
+}

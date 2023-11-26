@@ -1,0 +1,29 @@
+#slider {
+  width: 100%;
+  margin: 6rem 0 0 0;
+  height: 60vh;
+}
+#slider .slider-wrapper .swiper1 {
+  position: relative;
+}
+#slider .slider-wrapper .swiper1 .swiper-button-prev {
+  color: #fff !important;
+  transform: scale(1.5);
+  position: absolute;
+  left: 3rem;
+}
+#slider .slider-wrapper .swiper1 .swiper-button-next {
+  color: #fff !important;
+  transform: scale(1.5);
+  position: absolute;
+  right: 3rem;
+}
+#slider .slider-wrapper .swiper1 .slider-contents {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#slider .slider-wrapper .swiper1 .slider-contents img {
+  width: 110%;
+  height: 110%;
+}/*# sourceMappingURL=slider.css.map */

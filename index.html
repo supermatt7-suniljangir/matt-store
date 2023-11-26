@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Matt-Store Ecommerce</title>
+    <link rel="stylesheet" href="./src/scss/main.css" />
+    <link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+/>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="src/js/controller.js" type="module" defer></script>
+    <script src="src/js/common.js" defer></script>
+  </head>
+  <body>
+    <header>
+      <!-- navigation bar -->
+      <nav class="navbar">
+        <ul class="navigation-bar">
+          <div class="navigation-bar-l">
+            <li class="nav-item item-user">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 39 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                    d="M19.1322 24.7163C25.1709 24.7163 30.0649 19.1841 30.0649 12.3582C30.0649 5.53221 25.1709 0 19.1322 0C13.0936 0 8.19953 5.53221 8.19953 12.3582C8.19953 19.1841 13.0936 24.7163 19.1322 24.7163ZM26.7851 27.8059H25.3588C23.4626 28.7907 21.3529 29.3507 19.1322 29.3507C16.9115 29.3507 14.8104 28.7907 12.9057 27.8059H11.4793C5.14179 27.8059 0 33.6181 0 40.782V44.7984C0 47.3569 1.83635 49.4327 4.09977 49.4327H34.1647C36.4281 49.4327 38.2645 47.3569 38.2645 44.7984V40.782C38.2645 33.6181 33.1227 27.8059 26.7851 27.8059Z"
+                    fill="white"
+                  />
+                </svg>
+          
+            </li>
+              
+            <li class="nav-item item-cart">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 52 50"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M17.8325 50C19.9419 50 21.6519 48.1345 21.6519 45.8334C21.6519 43.5322 19.9419 41.6667 17.8325 41.6667C15.7231 41.6667 14.013 43.5322 14.013 45.8334C14.013 48.1345 15.7231 50 17.8325 50Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M44.5686 50C46.678 50 48.388 48.1345 48.388 45.8334C48.388 43.5322 46.678 41.6667 44.5686 41.6667C42.4591 41.6667 40.7491 43.5322 40.7491 45.8334C40.7491 48.1345 42.4591 50 44.5686 50Z"
+                    fill="white"
+                  />
+                  <path
+                    d="M51.348 7.39323C51.0797 7.03522 50.7417 6.74688 50.3586 6.54913C49.9754 6.35139 49.5566 6.2492 49.1328 6.25H12.8063L12.0747 1.72135C11.9967 1.23897 11.7653 0.801999 11.4213 0.487197C11.0773 0.172396 10.6426 -0.000102919 10.1936 4.6068e-08H2.55474C2.04825 4.6068e-08 1.5625 0.219494 1.20436 0.610195C0.846221 1.0009 0.64502 1.5308 0.64502 2.08333C0.64502 2.63587 0.846221 3.16577 1.20436 3.55647C1.5625 3.94717 2.04825 4.16667 2.55474 4.16667H8.59183L14.0417 37.862C14.1197 38.3444 14.351 38.7813 14.6951 39.0961C15.0391 39.4109 15.4738 39.5834 15.9228 39.5833H46.4783C46.9847 39.5833 47.4705 39.3638 47.8286 38.9731C48.1868 38.5824 48.388 38.0525 48.388 37.5C48.388 36.9475 48.1868 36.4176 47.8286 36.0269C47.4705 35.6362 46.9847 35.4167 46.4783 35.4167H17.5245L16.8514 31.25H45.6953C46.3576 31.2491 46.9992 30.9986 47.5116 30.5409C48.0241 30.0832 48.3758 29.4464 48.5073 28.7383L51.9448 9.98828C52.0277 9.53451 52.0171 9.06633 51.9139 8.61756C51.8107 8.16878 51.6174 7.75061 51.348 7.39323Z"
+                    fill="white"
+                  />
+                </svg>
+            </li>
+            <li class="nav-item item-search">
+              <form class="search-bar search-form">
+                <input
+                  type="text"
+                  class="serach-bar-input"
+                  placeholder="serach for a product or brand"
+                />
+                <button type="submit" class="svg-search-icon-container">
+                  <svg
+                    width="30"
+                    height="30"
+                    viewBox="0 0 45 47"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      d="M17.6786 0C27.4422 0 35.3571 8.15481 35.3571 18.2143C35.3571 22.6479 33.8196 26.7116 31.2639 29.8702L44.5293 43.5369C45.1569 44.1836 45.1569 45.232 44.5293 45.8787C43.9714 46.4534 43.1054 46.5173 42.479 46.0703L42.2564 45.8787L28.9916 32.2113C25.926 34.8445 21.9818 36.4286 17.6786 36.4286C7.91497 36.4286 0 28.2738 0 18.2143C0 8.15481 7.91497 0 17.6786 0ZM17.6786 3.31169C9.69017 3.31169 3.21429 9.98381 3.21429 18.2143C3.21429 26.4448 9.69017 33.1169 17.6786 33.1169C25.667 33.1169 32.1429 26.4448 32.1429 18.2143C32.1429 9.98381 25.667 3.31169 17.6786 3.31169Z"
+                      fill="black"
+                    />
+                  </svg>
+                </button>
+              </form>
+            </li>
+            <li class="nav-item">
+            <div class="categories-wrapper-container categories-container-nav">
+              <p class="para-medium category-title">category ▼</p>
+              <div class="dropdown-contents">
+              </div>
+            </div>
+            </li>
+          </div>
+          <div class="navigation-bar-r">
+            <li class="nav-item item-logo">
+              <a href="" class="nav-link"
+                ><img src="./src/img/log-nobg.png" alt="" class="nav-logo"
+              /></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
+    <main>
+      <!--  -->
+      <!-- slider component -->
+      <section id="slider">
+      <div class="slider-wrapper">
+        <!-- Slider main container -->
+<div class="swiper1">
+  <!-- Additional required wrapper -->
+  <div class="swiper-wrapper categories-wrapper-container">
+    <!-- Slides -->
+    <div class="swiper-slide"><a href="#smartphones" class="category-link"><div class="slider-contents"><img src="./src/img/slider-pic-1.png" alt="" class="slider-img"></div></a>
+</div>
+    <div class="swiper-slide"> <a href="#womens-dresses" class="category-link"><div class="slider-contents"><img src="./src/img/slider-pic-2.png" alt="" class="slider-img"></div></a>
+</div>
+    <div class="swiper-slide">  <a href="#laptops" class="category-link"><div class="slider-contents"><img src="./src/img/slider-pic-3.png" alt="" class="slider-img"></div></a>
+</div>
+    ...
+  </div>
+
+  <!-- If we need navigation buttons -->
+  <div class="swiper-button-prev"></div>
+  <div class="swiper-button-next"></div>
+
+</div>
+        <!-- <div class="slider-contants"><img src="src/img/slider-pic-2.png" alt="" class="slider-img"></div>
+        <div class="slider-contants"><img src="src/img/slider-pic-3.png" alt="" class="slider-img"></div> -->
+      </div>
+      </section>
+      <!--  -->
+
+      <!-- categories component -->
+      <section class="categories-wrapper">
+        <h2 class="heading-secondary categories-heading">
+          shop across top categories
+        </h2>
+        <!-- prettier-ignore -->
+        <div class="categories-wrapper-container">
+          <div class="category-box-wrapper"><div class="category-box "><a href="#mens-watches" class="category-link"><img src="src/img/wristWatch.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">wrist watches</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#womens-jewellery" class="category-link"><img src="src/img/jweles.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">ormanents</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#furniture" class="category-link"><img src="src/img/furniture.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">furniture</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#mens-shirts" class="category-link"><img src="src/img/clothings.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">clothing</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#laptops" class="category-link"><img src="src/img/laptops.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">laptops</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#fragrances" class="category-link"><img src="src/img/fragrance.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">fragrance</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#home-decoration" class="category-link"><img src="src/img/decoration.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">decoration</p></div>
+          <div class="category-box-wrapper"><div class="category-box "><a href="#smartphones" class="category-link"><img src="src/img/smartphones.jpg" alt="category-pic" class="category-pic"></a></div><p class="category-name para-medium">smartphones</p></div>
+ 
+        </div>
+      </section>
+      <section id="best-in-fashion">
+        <h2 class="heading-large best-in-fashion-heading">best in fashion</h2>
+        <div class="fashion-products-wrapper">
+          <div class="product-container">
+            <a class="product-link" href="#43">
+              <img src="src/img/newDress1.jpg" alt="frock gold printed
+" class="product-image" />
+              <div class="product-details">
+                <p class="product-title para-medium">frock gold printed
+</p>
+                <p class="product-description">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+                </p>
+                <p class="product-price para-medium">
+                  <b>$600</b>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="product-container">
+            <a class="product-link" href="#42">
+              <img src="src/img/newDress2.jpg" alt="Stiched Kurta plus trouser
+" class="product-image" />
+              <div class="product-details">
+                <p class="product-title para-medium">Stiched Kurta plus trouser
+</p>
+                <p class="product-description">
+FABRIC: LILEIN CHEST: 21 LENGHT: 37 TROUSER: (38) :ARABIC LILEIN
+                </p>
+                <p class="product-price para-medium">
+                  <b>80$ </b>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="product-container">
+            <a class="product-link" href="#40">
+              <img src="src/img/newDress3.jpg" alt="women winter clothes" class="product-image" />
+              <div class="product-details">
+                <p class="product-title para-medium">women winter clothes
+</p>
+                <p class="product-description">
+                  women winter clothes thick fleece hoodie top with sweat pantjogger women sweatsuit set joggers pants two piece pants set
+
+                </p>
+                <p class="product-price para-medium">
+                  <b>$57</b>
+                </p>
+              </div>
+            </a>
+          </div>
+          <div class="product-container">
+            <a class="product-link" href="#36">
+              <img src="src/img/newDress4.jpg" alt="Sleeve Shirt Womens" class="product-image" />
+              <div class="product-details">
+                <p class="product-title para-medium">Sleeve Shirt Womens
+</p>
+                <p class="product-description">
+                  Cotton Solid Color Professional Wear Sleeve Shirt Womens Work Blouses Wholesale Clothing Casual Plain Custom Top OEM Customized
+
+                </p>
+                <p class="product-price para-medium">
+                  <b>$90 <span class="price-without-discount"></span></b>
+                </p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section id="best-in-skincare">
+        <h2 class="heading-large best-in-skincare-heading">best in skincare</h2>
+
+        <div class="skincare-products-wrapper">
+         
+          
+        </div>
+      </section>
+
+      
+      <section id="bestsellers">
+        <h2 class="heading-mega bestsellers-heading">try our bestsellers</h2>
+<div class="swiper2">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide">
+      <div class="bestselling-product-container">
+      <a href="#9" class="product-link">
+        <img src="./src/img/laptops.jpg" alt="Infinix INBOOK
+
+" class="bestselling-product-img">
+        <p class="product-title para-medium">Infinix INBOOK
+
+</p>
+      </a>
+    </div></div>
+    <div class="swiper-slide"> <div class="bestselling-product-container">
+      <a href="#5" class="product-link">
+        <img src="./src/img/smartphones.jpg" alt="Huawei P30
+
+
+
+" class="bestselling-product-img">
+        <p class="product-title para-medium">Huawei P30
+
+
+
+</p>
+      </a>
+    </div></div>
+    <div class="swiper-slide"> <div class="bestselling-product-container">
+      <a href="#27" class="product-link">
+        <img src="./src/img/furniture.jpg" alt="Flying Wooden Bird
+
+" class="bestselling-product-img">
+        <p class="product-title para-medium">Flying Wooden Bird
+
+</p>
+      </a>
+    </div></div>
+    <div class="swiper-slide"> <div class="bestselling-product-container">
+      <a href="#26" class="product-link">
+        <img src="./src/img/decoration.jpg" alt="Plant Hanger For Home
+
+" class="bestselling-product-img">
+        <p class="product-title para-medium">Plant Hanger For Home
+
+</p>
+      </a>
+    </div></div>
+    <div class="swiper-slide"> <div class="bestselling-product-container">
+      <a href="#39" class="product-link">
+        <img src="./src/img/clothings.jpg" alt="Women Sweaters Wool
+
+" class="bestselling-product-img">
+        <p class="product-title para-medium">Women Sweaters Wool
+
+</p>
+      </a>
+    </div></div>
+  
+  </div>
+ 
+</div>
+
+
+        
+      </section>
+
+    </main>
+    <br /><br /><br /><br /><br />
+    <footer>
+      <img src="src/img/log-nobg.png" alt="logo" class="logo" />
+      <div class="matt-store-info">
+        <h1 class="heading-primary">Matt-Store</h1>
+        <p class="para-large">online destination for all your needs</p>
+        <div class="bullshit">
+          <p class="privary-policy">privary policy</p>
+          <p class="terms-of-service">terms of service</p>
+          <p class="copyright-policy">copyright policy</p>
+        </div>
+      </div>
+      <div class="go-to-top">
+        <svg
+          width="95"
+          height="95"
+          viewBox="0 0 95 95"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M0.13781 47.2249C0.213752 73.0939 21.3558 94.1122 47.2248 94.0362C73.0938 93.9603 94.1121 72.8182 94.0361 46.9493C93.9602 21.0803 72.8181 0.0619742 46.9492 0.137916C21.0802 0.213857 0.0618688 21.3559 0.13781 47.2249ZM49.5368 33.981L66.1585 50.5054C66.8648 51.2075 67.1961 52.0986 67.1987 52.9906C67.2013 53.8827 66.8753 54.7757 66.1731 55.482C64.8156 56.8475 62.5621 56.8541 61.1965 55.4966L47.0704 41.4532L33.027 55.5793C31.6695 56.9448 29.4159 56.9514 28.0504 55.5939C26.6849 54.2364 26.6783 51.9828 28.0358 50.6173L44.5602 33.9956C45.9176 32.5831 48.1712 32.5765 49.5368 33.981Z"
+            fill="white"
+          />
+        </svg>
+      </div>
+      <div class="footer-contents-bottom-left">
+        <button class="visit-portfolio-btn">
+          <a
+            href="https://suniljangid.in"
+            class="visit-portfolio-link normal-link"
+            target="_blank"
+            >visit portfolio</a
+          >
+        </button>
+        <p class="para-small">
+          made with gsap, dummyJSON API and a lot of pain
+        </p>
+      </div>
+      <p class="footer-contents-bottom-right">
+        designed and crafted by sunil jangid &copy; 2023
+      </p>
+    </footer>
+
+
+
+    <!-- user from -->
+
+    <section id="user-form">
+      <form method="POST" netlify class="form">
+        <h2 class="heading-secondary">feedback form</h2>
+        <input type="text" class="fullname" placeholder="enter your username"  />
+        <input type="email" class="email" placeholder="enter your email" />
+     <textarea name="message" id="message" placeholder="what do you think of my work or any other query if you got"></textarea>
+        <button class="form-btn">submit</button>
+      </form>
+      <div class="additional-data">
+        <p class="feeback-notice">
+        this is a Feedback form, your suggestions are appreciated. <br>Your Feedback will help me improve my future projects in effecient way.
+       <br> <b>thank you.</b>
+        </p>
+      </div>
+      <div class="user-page-cancel-icon"><svg width="45" height="45" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4998 5.41663C17.5228 5.41663 5.4165 17.5229 5.4165 32.5C5.4165 47.477 17.5228 59.5833 32.4998 59.5833C47.4769 59.5833 59.5832 47.477 59.5832 32.5C59.5832 17.5229 47.4769 5.41663 32.4998 5.41663ZM44.1457 44.1458C43.0894 45.202 41.3832 45.202 40.3269 44.1458L32.4998 36.3187L24.6728 44.1458C23.6165 45.202 21.9103 45.202 20.854 44.1458C19.7978 43.0895 19.7978 41.3833 20.854 40.327L28.6811 32.5L20.854 24.6729C19.7978 23.6166 19.7978 21.9104 20.854 20.8541C21.9103 19.7979 23.6165 19.7979 24.6728 20.8541L32.4998 28.6812L40.3269 20.8541C41.3832 19.7979 43.0894 19.7979 44.1457 20.8541C45.2019 21.9104 45.2019 23.6166 44.1457 24.6729L36.3186 32.5L44.1457 40.327C45.1748 41.3562 45.1748 43.0895 44.1457 44.1458Z" fill="white"/>
+</svg>
+</div>
+      <img class="user-page-logo" src="src/img/log-nobg.png"></img>
+    </section>
+
+
+<section id="cart">
+  <div class="cart-wrapper">
+    
+  
+
+  
+  
+  </div>
+  <button class="check-out-btn">check out →</button>
+   <div class="cart-cancel-icon"><svg width="45" height="45" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4998 5.41663C17.5228 5.41663 5.4165 17.5229 5.4165 32.5C5.4165 47.477 17.5228 59.5833 32.4998 59.5833C47.4769 59.5833 59.5832 47.477 59.5832 32.5C59.5832 17.5229 47.4769 5.41663 32.4998 5.41663ZM44.1457 44.1458C43.0894 45.202 41.3832 45.202 40.3269 44.1458L32.4998 36.3187L24.6728 44.1458C23.6165 45.202 21.9103 45.202 20.854 44.1458C19.7978 43.0895 19.7978 41.3833 20.854 40.327L28.6811 32.5L20.854 24.6729C19.7978 23.6166 19.7978 21.9104 20.854 20.8541C21.9103 19.7979 23.6165 19.7979 24.6728 20.8541L32.4998 28.6812L40.3269 20.8541C41.3832 19.7979 43.0894 19.7979 44.1457 20.8541C45.2019 21.9104 45.2019 23.6166 44.1457 24.6729L36.3186 32.5L44.1457 40.327C45.1748 41.3562 45.1748 43.0895 44.1457 44.1458Z" fill="white"/>
+</svg>
+</div>
+</section>
+
+
+<section id="product">
+  <div class="product-wrapper">
+    <!-- <div class="mega-product-container">
+<div class="product-pics-balls-container">
+  <div class="product-pic-ball"><img src="src/img/infinix laptop.jpg" alt="" class="product-image-preview"></div>
+  <div class="product-pic-ball"><img src="src/img/infinix laptop.jpg" alt="" class="product-image-preview"></div>
+  <div class="product-pic-ball"><img src="src/img/infinix laptop.jpg" alt="" class="product-image-preview"></div>
+  <div class="product-pic-ball"><img src="src/img/infinix laptop.jpg" alt="" class="product-image-preview"></div>
+  <div class="product-pic-ball"><img src="src/img/infinix laptop.jpg" alt="" class="product-image-preview"></div>
+</div>
+<div class="product-image-container"><img src="src/img/laptops.jpg" alt="" class="product-image"></div>
+
+<div class="product-extended-information">
+      <p class="para-large">product name</p>
+      <p class="product-brand para-medium">infinix</p>
+      <p class="para product-description">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis, repellat.</p>
+      <p class="para-large product-price"><b>500$</b><sub><span class="price-without-discount">100$</span></sub></p>
+      <p class="discount-percentages para">50% off</p>
+      <button class="add-to-cart-btn">add to cart</button>
+    </div>
+    </div> -->
+    
+  </div>
+     <div class="product-cancel-icon"><svg width="45" height="45" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4998 5.41663C17.5228 5.41663 5.4165 17.5229 5.4165 32.5C5.4165 47.477 17.5228 59.5833 32.4998 59.5833C47.4769 59.5833 59.5832 47.477 59.5832 32.5C59.5832 17.5229 47.4769 5.41663 32.4998 5.41663ZM44.1457 44.1458C43.0894 45.202 41.3832 45.202 40.3269 44.1458L32.4998 36.3187L24.6728 44.1458C23.6165 45.202 21.9103 45.202 20.854 44.1458C19.7978 43.0895 19.7978 41.3833 20.854 40.327L28.6811 32.5L20.854 24.6729C19.7978 23.6166 19.7978 21.9104 20.854 20.8541C21.9103 19.7979 23.6165 19.7979 24.6728 20.8541L32.4998 28.6812L40.3269 20.8541C41.3832 19.7979 43.0894 19.7979 44.1457 20.8541C45.2019 21.9104 45.2019 23.6166 44.1457 24.6729L36.3186 32.5L44.1457 40.327C45.1748 41.3562 45.1748 43.0895 44.1457 44.1458Z" fill="white"/>
+</svg>
+</div>
+</section>
+
+
+
+<section id="search-results">
+    <div class="search-overlay"></div>
+  <div class="search-results-wrapper">
+  
+  </div>
+   <div class="search-results-cancel-icon"><svg width="45" height="45" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4998 5.41663C17.5228 5.41663 5.4165 17.5229 5.4165 32.5C5.4165 47.477 17.5228 59.5833 32.4998 59.5833C47.4769 59.5833 59.5832 47.477 59.5832 32.5C59.5832 17.5229 47.4769 5.41663 32.4998 5.41663ZM44.1457 44.1458C43.0894 45.202 41.3832 45.202 40.3269 44.1458L32.4998 36.3187L24.6728 44.1458C23.6165 45.202 21.9103 45.202 20.854 44.1458C19.7978 43.0895 19.7978 41.3833 20.854 40.327L28.6811 32.5L20.854 24.6729C19.7978 23.6166 19.7978 21.9104 20.854 20.8541C21.9103 19.7979 23.6165 19.7979 24.6728 20.8541L32.4998 28.6812L40.3269 20.8541C41.3832 19.7979 43.0894 19.7979 44.1457 20.8541C45.2019 21.9104 45.2019 23.6166 44.1457 24.6729L36.3186 32.5L44.1457 40.327C45.1748 41.3562 45.1748 43.0895 44.1457 44.1458Z" fill="white"/>
+</svg>
+</div>
+</section>
+
+<!-- section category results -->
+<section id="category-page">
+  <h2 class="browse-category-heading heading-secodnary heading-medium">browse category: X</h2>
+  <div class="category-wrapper">
+    
+   
+  </div>
+
+   <div class="category-product-cancel-icon"><svg width="45" height="45" viewBox="0 0 65 65" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M32.4998 5.41663C17.5228 5.41663 5.4165 17.5229 5.4165 32.5C5.4165 47.477 17.5228 59.5833 32.4998 59.5833C47.4769 59.5833 59.5832 47.477 59.5832 32.5C59.5832 17.5229 47.4769 5.41663 32.4998 5.41663ZM44.1457 44.1458C43.0894 45.202 41.3832 45.202 40.3269 44.1458L32.4998 36.3187L24.6728 44.1458C23.6165 45.202 21.9103 45.202 20.854 44.1458C19.7978 43.0895 19.7978 41.3833 20.854 40.327L28.6811 32.5L20.854 24.6729C19.7978 23.6166 19.7978 21.9104 20.854 20.8541C21.9103 19.7979 23.6165 19.7979 24.6728 20.8541L32.4998 28.6812L40.3269 20.8541C41.3832 19.7979 43.0894 19.7979 44.1457 20.8541C45.2019 21.9104 45.2019 23.6166 44.1457 24.6729L36.3186 32.5L44.1457 40.327C45.1748 41.3562 45.1748 43.0895 44.1457 44.1458Z" fill="white"/>
+</svg>
+</div>
+</section>
+
+
+    
+  </body>
+</html>

@@ -1,0 +1,23 @@
+$bg-primary: #121111;
+$bg-secondary: #1e1e1e;
+$color-primary: #fff;
+$bg-light: #fff;
+$bg-tertiary: #383838;
+@mixin abs-align-center {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+@mixin dfc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin dfcc {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}

@@ -1,0 +1,36 @@
+#bestsellers {
+  height: 100vh;
+  width: 100%;
+  position: relative;
+  background: #1e1e1e;
+  margin-top: 2rem;
+  padding: 1rem;
+}
+#bestsellers h2 {
+  text-align: center;
+  margin: 1rem;
+}
+#bestsellers .swiper2 {
+  width: 100%;
+  height: 100%;
+}
+#bestsellers .swiper2 .swiper-slide {
+  overflow: hidden;
+  background-position: center;
+  background-size: cover;
+  width: 30%;
+  height: 75vh;
+}
+#bestsellers .swiper2 .swiper-slide .bestselling-product-container .product-link {
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+#bestsellers .swiper2 .swiper-slide .bestselling-product-container .product-link img {
+  overflow: hidden;
+  width: 100%;
+  height: 60vh;
+}/*# sourceMappingURL=bestseller.css.map */

@@ -1,0 +1,27 @@
+@import "../variables-mixins/var-mix";
+
+#best-in-skincare {
+  width: 100%;
+  height: clamp(60vh, 80vh, 80vh);
+  padding: 1.5rem;
+  .skincare-products-wrapper {
+    position: relative;
+    background: $bg-secondary;
+    height: 85%;
+    padding: 1rem;
+    @include dfc;
+    flex-wrap: wrap;
+    gap: 2rem;
+
+    .product-container {
+      text-align: center;
+      border-radius: 5px;
+      img {
+        border-radius: 5px;
+
+        width: 15rem;
+        aspect-ratio: 1/1;
+      }
+    }
+  }
+}

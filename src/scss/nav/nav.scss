@@ -1,0 +1,101 @@
+@import "../variables-mixins/var-mix";
+
+.navbar {
+  z-index: 2;
+  position: fixed;
+  background-color: $bg-secondary;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 4rem;
+  .navigation-bar {
+    height: inherit;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    li {
+      cursor: pointer;
+    }
+    .navigation-bar-l {
+      @include dfc;
+      gap: 2rem;
+      .search-bar {
+        width: 25rem;
+        height: 2.5rem;
+        @include dfc;
+        input {
+          border-radius: 5px 0 0 5px;
+          height: 100%;
+          padding: 0.5rem;
+          height: 85%;
+          width: 95%;
+          background-color: $bg-tertiary;
+          border: none;
+          color: $color-primary;
+
+          &:focus {
+            border: none;
+            outline: none;
+          }
+        }
+      }
+      .svg-search-icon-container {
+        border-radius: 0 5px 5px 0;
+        width: 4rem;
+        @include dfc;
+        background: $bg-light;
+        height: 85%;
+      }
+      #categories-input {
+        padding: 0.2rem 0.2rem;
+        font-size: 1rem;
+        text-align: center;
+        background: $bg-tertiary;
+        color: $color-primary;
+        border-radius: 5px;
+        text-transform: capitalize;
+      }
+      .categories-wrapper-container {
+        overflow: visible;
+        width: 10rem;
+        height: 2.3rem;
+        background: $bg-tertiary;
+        position: relative;
+        border-radius: 5px;
+        .category-title {
+          width: 100%;
+          height: 100%;
+          @include abs-align-center;
+          @include dfc;
+        }
+        .dropdown-contents {
+          border-radius: 0 0 10px 10px;
+          position: absolute;
+          background: $bg-tertiary;
+          width: 100%;
+          top: 95%;
+          left: 0;
+          padding: 0.5rem 0.2rem;
+          height: max-content;
+          @include dfcc;
+          text-transform: capitalize;
+          gap: 0.3rem;
+
+          display: none;
+        }
+        &:where(:hover, :focus) { 
+          .dropdown-contents {
+            display: flex;
+          }
+        }
+      }
+    }
+    .navigation-bar-r {
+      img {
+        margin-top: -1rem;
+        width: 5.5rem;
+      }
+    }
+  }
+}

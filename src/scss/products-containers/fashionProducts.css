@@ -1,0 +1,39 @@
+#best-in-fashion {
+  margin: 5rem 0 0 0;
+  height: 250vh;
+  width: 100%;
+  padding: 1.5rem;
+}
+#best-in-fashion .fashion-products-wrapper {
+  position: relative;
+  padding: 1rem;
+  margin: auto;
+  background: #1e1e1e;
+  width: 100%;
+  height: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+#best-in-fashion .fashion-products-wrapper .product-container {
+  border-radius: 5px;
+  background: #121111;
+  height: 45%;
+  width: 40%;
+}
+#best-in-fashion .fashion-products-wrapper .product-container img {
+  border-radius: 5px;
+  height: 75%;
+  width: 100%;
+}
+#best-in-fashion .fashion-products-wrapper .product-container .product-details {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 1rem;
+  gap: 0.5rem;
+}/*# sourceMappingURL=fashionProducts.css.map */

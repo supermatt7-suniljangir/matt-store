@@ -1,0 +1,69 @@
+#user-form {
+  position: fixed;
+  top: 0rem;
+  left: 0rem;
+  height: 100vh;
+  transform: translateX(-200%);
+  background: #121111;
+  z-index: 3;
+  width: 100%;
+  transition: all 500ms ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #121111;
+}
+#user-form .form {
+  border-radius: 10px;
+  height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 55dvw;
+  gap: 1rem;
+  background: #1e1e1e;
+}
+#user-form .form input,
+#user-form .form textarea {
+  border: 1px solid ridge;
+  padding: 0.3rem 0.5rem;
+  resize: none;
+  background: #383838;
+  width: 70%;
+}
+#user-form .form input:focus,
+#user-form .form textarea:focus {
+  outline: none;
+}
+#user-form .form textarea {
+  height: 10rem;
+}
+#user-form .form .form-btn {
+  padding: 0.2rem 1.5rem;
+  background: #383838;
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 1.2rem;
+  cursor: pointer;
+  text-transform: capitalize;
+}
+#user-form .form .form-btn:active {
+  translate: 0px 5px;
+}
+#user-form .additional-data {
+  margin-top: 1rem;
+  text-align: center;
+}
+#user-form .user-page-cancel-icon {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  cursor: pointer;
+}
+#user-form .user-page-logo {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+  width: 10rem;
+}/*# sourceMappingURL=user.css.map */

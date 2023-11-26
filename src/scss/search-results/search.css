@@ -1,0 +1,62 @@
+#search-results {
+  position: fixed;
+  z-index: 3;
+  display: none;
+  top: 3rem;
+  left: 0rem;
+}
+#search-results .search-results-cancel-icon {
+  position: fixed;
+  top: 5rem;
+  left: 45%;
+  transform: translateX(-120%);
+  cursor: pointer;
+}
+#search-results .search-results-wrapper {
+  background: #1e1e1e;
+  overflow: scroll;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: 95vh;
+  width: 45%;
+  padding: 2rem 1rem 1rem 1rem;
+  gap: 1rem;
+}
+#search-results .search-results-wrapper .product-link {
+  background: #383838;
+  height: 5.5rem;
+  width: 85%;
+  display: block !important;
+  border-radius: 5px;
+}
+#search-results .search-results-wrapper .found-product {
+  font-size: 90%;
+  padding: 0.5rem 1.5rem;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  justify-content: flex-start !important;
+  gap: 1rem;
+}
+#search-results .search-results-wrapper .found-product .product-container-l {
+  width: 3.5rem;
+  height: 3.5rem;
+  border-radius: 50%;
+}
+#search-results .search-results-wrapper .found-product .product-container-r p {
+  margin: 0.4rem;
+}
+#search-results .search-overlay {
+  width: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100vh;
+}/*# sourceMappingURL=search.css.map */

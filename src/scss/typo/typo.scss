@@ -1,0 +1,53 @@
+@import url("https://fonts.googleapis.com/css2?family=Archivo+Narrow:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+@import "../variables-mixins/var-mix";
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo Narrow", sans-serif;
+  font-weight: 600;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+  font-size: 170%;
+}
+p,
+input,
+a,
+span {
+  font-family: "Quicksand", sans-serif;
+  font-weight: 500;
+}
+*,
+a {
+  color: $color-primary;
+}
+
+.heading-mega {
+  font-size: 450%;
+}
+.heading-large {
+  font-size: 400%;
+}
+.heading-medium {
+  font-size: 200%;
+}
+.para-large {
+  font-size: 180%;
+  font-family: "Archivo Narrow", sans-serif;
+  text-transform: capitalize;
+  letter-spacing: 1.8px;
+}
+.para-medium {
+  font-size: 130%;
+  text-transform: capitalize;
+}
+.heading-primary {
+  font-size: 300%;
+  text-transform: uppercase;
+}
+.product-brand {
+  text-transform: uppercase;
+}

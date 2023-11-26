@@ -1,0 +1,52 @@
+footer {
+  height: 100vh;
+  gap: 2rem;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+footer .logo-box {
+  margin: auto;
+}
+footer .matt-store-info {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 1rem;
+}
+footer .matt-store-info .bullshit {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+footer .matt-store-info .bullshit p {
+  cursor: pointer;
+}
+footer .go-to-top {
+  cursor: pointer;
+}
+footer .footer-contents-bottom-left {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+}
+footer .footer-contents-bottom-left .visit-portfolio-btn {
+  font-family: "Archivo Narrow", sans-serif;
+  font-size: 110%;
+  border: none;
+  background: #fff;
+  padding: 0.5rem 1rem;
+  margin: 0 0 1rem 0;
+}
+footer .footer-contents-bottom-left .visit-portfolio-btn a {
+  color: #1e1e1e;
+}
+footer .footer-contents-bottom-right {
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
+}/*# sourceMappingURL=footer.css.map */

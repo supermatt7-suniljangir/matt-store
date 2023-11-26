@@ -1,0 +1,75 @@
+@import "../variables-mixins/var-mix.scss";
+body {
+  background: $bg-primary;
+}
+* {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  box-sizing: border-box;
+}
+
+::-webkit-scrollbar {
+  width: 0.3rem;
+  background-color: $bg-secondary;
+}
+::-webkit-scrollbar-thumb {
+  width: 0.2rem;
+  background-color: $bg-primary;
+}
+.view-all-link {
+  position: absolute;
+  text-transform: capitalize;
+  bottom: 1rem;
+  right: 2rem;
+  font-size: 110%;
+  &:where(:hover, :focus) {
+    transform: scale(1.05);
+    text-decoration: underline;
+  }
+  &:where(:active) {
+    transform: translateY(-5px);
+  }
+}
+.product-container,
+.category-box-wrapper {
+  cursor: pointer;
+  transition: all 500ms ease;
+  &:where(:hover, :focus) {
+    transform: scale(1.08);
+  }
+}
+.price-without-discount {
+  text-decoration: line-through;
+  font-size: 80%;
+}
+.message {
+  @include abs-align-center;
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+button {
+  border: none;
+  cursor: pointer;
+}
+.hidden {
+  display: none !important;
+}
+.spinner {
+  width: 3rem;
+  border-radius: 50%;
+  @include abs-align-center;
+  // position: fixed;
+  aspect-ratio: 1/1;
+  border: dotted 10px $bg-light;
+  animation: rotateSpinner 1s linear infinite;
+}
+@keyframes rotateSpinner {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

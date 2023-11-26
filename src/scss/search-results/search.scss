@@ -1,0 +1,62 @@
+@import "../variables-mixins/var-mix";
+#search-results {
+  position: fixed;
+  z-index: 3;
+  display: none;
+  top: 3rem;
+  left: 0rem;
+
+  .search-results-cancel-icon {
+    position: fixed;
+    top: 5rem;
+    left: 45%;
+    transform: translateX(-120%);
+    cursor: pointer;
+  }
+  .search-results-wrapper {
+    background: $bg-secondary;
+    overflow: scroll;
+    position: fixed;
+    @include dfcc;
+    justify-content: flex-start;
+    height: 95vh;
+    width: 45%;
+    padding: 2rem 1rem 1rem 1rem;
+    gap: 1rem;
+    .product-link {
+      background: $bg-tertiary;
+      height: 5.5rem;
+      width: 85%;
+      display: block !important;
+      border-radius: 5px;
+    }
+    .found-product {
+      font-size: 90%;
+      padding: 0.5rem 1.5rem;
+      width: 100%;
+      height: 100%;
+      @include dfc;
+      gap: 2rem;
+      justify-content: flex-start !important;
+
+      gap: 1rem;
+      .product-container-l {
+        width: 3.5rem;
+        height: 3.5rem;
+        border-radius: 50%;
+      }
+      .product-container-r {
+        p {
+          margin: 0.4rem;
+        }
+      }
+    }
+  }
+  .search-overlay {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    height: 100vh;
+  }
+}

@@ -1,0 +1,25 @@
+#best-in-skincare {
+  width: 100%;
+  height: 80vh;
+  padding: 1.5rem;
+}
+#best-in-skincare .skincare-products-wrapper {
+  position: relative;
+  background: #1e1e1e;
+  height: 85%;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+#best-in-skincare .skincare-products-wrapper .product-container {
+  text-align: center;
+  border-radius: 5px;
+}
+#best-in-skincare .skincare-products-wrapper .product-container img {
+  border-radius: 5px;
+  width: 15rem;
+  aspect-ratio: 1/1;
+}/*# sourceMappingURL=skincareProducts.css.map */
