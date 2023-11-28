@@ -13,8 +13,7 @@ export const state = {
 export async function loadProduct(id) {
   try {
     let newData = await AJAX(id);
-    state.product = { ...newData, quantity: 1 };
-    
+    state.product = newData
   } catch (err) {
     throw err;
   }

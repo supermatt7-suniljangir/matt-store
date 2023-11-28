@@ -58,5 +58,8 @@ class ProductView extends View {
         }
       });
   }
+  getProductView(handler) {
+    window.addEventListener("hashchange", handler);
+  }
 }
 export default new ProductView();

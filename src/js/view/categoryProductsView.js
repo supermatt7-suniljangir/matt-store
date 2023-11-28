@@ -25,5 +25,8 @@ class CategoryProductsView extends View {
       ".browse-category-heading"
     ).textContent = `browse category: ${this.data[0].category}`;
   }
+  getCategoryProducts(handler) {
+    window.addEventListener("hashchange", handler);
+  }
 }
 export default new CategoryProductsView();

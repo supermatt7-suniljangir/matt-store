@@ -37,4 +37,7 @@ export default class View {
     this._clear();
     this._parentElement.insertAdjacentHTML("afterbegin", markUp);
   }
+  handleHashChange(handler) {
+    window.addEventListener("hashchange", handler);
+  }
 }

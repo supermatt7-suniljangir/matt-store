@@ -1,3 +1,5 @@
+// import "/core-js/stable";
+// import "/regenerator-runtime/runtime";
 import * as model from "./model.js";
 import View from "./view/view.js";
 import searchView from "./view/searchView.js";
@@ -10,7 +12,7 @@ import categoryProductsView from "./view/categoryProductsView.js";
 import productView from "./view/productView.js";
 import cartView from "./view/cartView.js";
 let id;
-window.addEventListener("hashchange", () => {
+function getProduct() {
   id = window.location.hash.slice(1);
   try {
     if (id === "" || !id) {
@@ -18,14 +20,15 @@ window.addEventListener("hashchange", () => {
     }
     if (!isNaN(id) && id && model.state.product.id !== id) {
       controlProduct(id);
-      window.location.hash = "";
     }
   } catch (err) {
     productView.renderMessage(
       "something went wrong while fetching prodct data: " + err
     );
   }
-
+}
+function getCategoryProducts() {
+  let id = window.location.hash.slice(1);
   try {
     let isValidCategory = model.state.categories.some((el) => el === id);
     if (isValidCategory) controlCategoryProducts(id);
@@ -35,7 +38,7 @@ window.addEventListener("hashchange", () => {
       "the category data is not available " + err
     );
   }
-});
+}
 async function controlProduct(id) {
   try {
     productView.renderSpinner();
@@ -97,6 +100,8 @@ async function controlSearchResults() {
 }
 
 function init() {
+  productView.getProductView(getProduct);
+  categoryProductsView.getCategoryProducts(getCategoryProducts);
   controlCategories();
   controlSkincareProducts();
   searchView.getSearchResults(controlSearchResults);
