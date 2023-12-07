@@ -26,7 +26,7 @@ export default class View {
         document
           .querySelector(".remove-from-cart-btn")
           ?.classList.add("hidden");
-        document.querySelector(".add-to-cart-btn").removeAttribute("disabled");
+        document.querySelector(".add-to-cart-btn")?.removeAttribute("disabled");
         document.querySelector(".add-to-cart-btn").textContent = "add to cart";
       }
     });

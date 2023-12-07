@@ -56,9 +56,8 @@ handleUserForm();
 
 function handleCart() {
   let opened = false;
-
   cartIcon.addEventListener("click", () => {
-    window.location.hash = "";
+    window.location.hash = "/cart";
     cartWindow.style.zIndex = 2;
     opened = !opened;
     opened
@@ -66,8 +65,6 @@ function handleCart() {
       : (cartWindow.style.transform = `translateX(-200%)`);
   });
   cancelCartIcon.addEventListener("click", () => {
-    window.location.hash = "";
-
     cartWindow.style.transform = `translateX(-200%)`;
     opened = false;
   });
